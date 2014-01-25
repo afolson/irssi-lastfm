@@ -29,3 +29,10 @@ my %IRSSI = (
 	description	=> 'An irssi script to display what music you're listening to via last.fm',
 	license		=> 'GPL',
 );
+
+Irssi::settings_add_str('lastfm', 'lastfm_username', '');
+
+
+		if ($lastfm_username eq '') {
+			Irssi::print "ERROR: You must set a username via /set lastfm_username";
+		}
